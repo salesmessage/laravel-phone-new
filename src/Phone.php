@@ -63,7 +63,9 @@ class Phone
         $this->formattedNumber = $formattedNumber;
         $this->country = $country;
         $this->countryCallingCode = (int) str_replace(
-            ['+', $this->nationalNumber], '', $this->number
+            ['+', $this->nationalNumber, (int) $this->nationalNumber],
+            '',
+            $this->number
         );
     }
 
