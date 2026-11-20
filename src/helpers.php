@@ -9,7 +9,7 @@ if (! function_exists('phone')) {
      * @param string|null $driver
      * @return \EllisIO\Phone\Contracts\Driver
      */
-    function phone(string $driver = null)
+    function phone(?string $driver = null)
     {
         return app(Factory::class)->driver($driver);
     }
